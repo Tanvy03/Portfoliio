@@ -203,6 +203,20 @@ nav ul li a {
     .projects-grid {
         grid-template-columns: 1fr; /* Stack projects on smaller screens */
     }
+    .hero .btn {
+        display: block; /* Stack the buttons vertically */
+        width: 100%; /* Make the buttons full-width */
+        margin-bottom: 10px; /* Add some space between buttons */
+        text-align: center; /* Center the text inside the button */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust the text size for mobile */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Adjust the heading size for mobile */
+    }
 }
 
 @keyframes pop {
