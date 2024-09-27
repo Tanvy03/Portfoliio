@@ -1,0 +1,264 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Navbar */
+#navbar {
+    position: fixed; /* Keeps navbar at the top */
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: #333; 
+    z-index: 1000; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo h2 {
+    color: #fff;
+}
+
+/* Welcome Section */
+.hero {
+    background-color: #446;
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.hero .btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.hero .btn:hover {
+    background-color: #e64a19;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: #e0f7fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px);
+}
+
+.skills-list li::before {
+    content: "✔";
+    margin-right: 10px;
+    color: #009688;
+    font-weight: bold;
+}
+
+/* Fun Projects Section */
+#projects {
+    background-color: #f4f4f4;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem; /* Added padding to prevent overflow */
+}
+
+.project-tile {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.project-tile:hover {
+    transform: scale(1.05);
+}
+
+.project-tile h3 {
+    color: #ff5722;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-tile p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.project-tile a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-tile a:hover {
+    color: #e64a19;
+}
+
+.project-tile::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff5722;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: pop 1s ease-in-out infinite;
+}
+
+/* Ensure images or other media inside the project-tile do not cause overflow */
+.project-tile img, .project-tile video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Fixes for responsiveness */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack projects on smaller screens */
+    }
+}
+
+@keyframes pop {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Education & Certifications */
+#education, #certifications {
+    padding: 4rem 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#education p, #certifications p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.certification-tile {
+    background-color: #e0f7fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f4f4f4;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#contact p {
+    margin-bottom: 1.5rem;
+}
+
+.contact-details a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    color: #e64a19;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
