@@ -2,7 +2,7 @@ Jannatul Tanvy | Portfolio
 Welcome to my personal portfolio website! This project showcases my work, skills, and projects as a Computer Engineer and Front-End Developer. I created this portfolio to provide a brief yet detailed overview of my technical abilities and projects that I’ve been working on.
 
 Live Website
-You can view the live version of my portfolio here: https://tanvy03.github.io/Portfoliio/
+You can view the live version of my portfolio here: https://tanvy03.github.io/Portfolio/
 
 Technologies Used
 HTML5: Structuring the content of the website.
